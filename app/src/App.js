@@ -13,9 +13,10 @@ import {
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import "@solana/wallet-adapter-react-ui/styles.css";
+import IDL from "./idl/storychain.json"
 
 // Replace with your program ID
-const PROGRAM_ID = "5cdQ4zLH1uNSb4ooU4uXNvKmHSrr7Hv46XR7kMVR12Nw";
+const PROGRAM_ID = IDL.address;
 
 // Replace with your network URL
 const network = "https://api.devnet.solana.com";
