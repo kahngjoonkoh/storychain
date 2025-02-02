@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/storychain/static/css/main.577f8bd3.css",
-    "main.js": "/storychain/static/js/main.a4b84bde.js",
+    "main.js": "/storychain/static/js/main.3fdff9d9.js",
     "static/js/648.2faf3860.chunk.js": "/storychain/static/js/648.2faf3860.chunk.js",
     "static/js/227.0210b86b.chunk.js": "/storychain/static/js/227.0210b86b.chunk.js",
     "static/js/488.9e6ea7b4.chunk.js": "/storychain/static/js/488.9e6ea7b4.chunk.js",
     "index.html": "/storychain/index.html",
     "main.577f8bd3.css.map": "/storychain/static/css/main.577f8bd3.css.map",
-    "main.a4b84bde.js.map": "/storychain/static/js/main.a4b84bde.js.map",
+    "main.3fdff9d9.js.map": "/storychain/static/js/main.3fdff9d9.js.map",
     "648.2faf3860.chunk.js.map": "/storychain/static/js/648.2faf3860.chunk.js.map",
     "227.0210b86b.chunk.js.map": "/storychain/static/js/227.0210b86b.chunk.js.map",
     "488.9e6ea7b4.chunk.js.map": "/storychain/static/js/488.9e6ea7b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.577f8bd3.css",
-    "static/js/main.a4b84bde.js"
+    "static/js/main.3fdff9d9.js"
   ]
 }
