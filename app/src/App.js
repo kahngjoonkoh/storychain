@@ -21,6 +21,21 @@ const PROGRAM_ID = IDL.address;
 // Replace with your network URL
 const network = "https://api.devnet.solana.com";
 
+const [globalStatePDA] = await PublicKey.findProgramAddress(
+  [Buffer.from("GLOBAL_STATE")],
+  program.programId
+);
+
+// Use the derived PDA
+await program.methods
+  .initializeProgram()
+  .accounts({
+      globalState: globalStatePDA,
+      admin: wallet.publicKey,
+      systemProgram: SystemProgram.programId,
+  })
+  .rpc();
+  
 function App() {
   const [loading, setLoading] = useState(false);
   const wallet = useAnchorWallet();
