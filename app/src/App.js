@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import { useAnchorWallet, useWallet } from "@solana/wallet-adapter-react";
 import { Connection, PublicKey, SystemProgram, Keypair } from "@solana/web3.js";
 import { Program, AnchorProvider } from "@project-serum/anchor";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { WalletMultiButton, WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -65,25 +65,27 @@ function App() {
   return (
     <ConnectionProvider endpoint={network}>
       <WalletProvider wallets={wallets} autoConnect>
-        <div className="App">
-          <header className="App-header">
-            <h1>Solana dApp</h1>
-            <WalletMultiButton />
-            {connected && (
-              <button
-                onClick={initializeProgram}
-                disabled={loading}
-                style={{
-                  padding: "10px 20px",
-                  margin: "20px",
-                  cursor: loading ? "not-allowed" : "pointer",
-                }}
-              >
-                {loading ? "Processing..." : "Initialize Program"}
-              </button>
-            )}
-          </header>
-        </div>
+        <WalletModalProvider>
+          <div className="App">
+            <header className="App-header">
+              <h1>Solana dApp</h1>
+              <WalletMultiButton />
+              {connected && (
+                <button
+                  onClick={initializeProgram}
+                  disabled={loading}
+                  style={{
+                    padding: "10px 20px",
+                    margin: "20px",
+                    cursor: loading ? "not-allowed" : "pointer",
+                  }}
+                >
+                  {loading ? "Processing..." : "Initialize Program"}
+                </button>
+              )}
+            </header>
+          </div>
+        </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
   );
